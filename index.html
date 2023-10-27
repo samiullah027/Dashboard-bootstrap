@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./assests/css/home.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="side-bar">
+        <nav id="sidebarMenu" class="collapse sidebar-main d-lg-block sidebar collapse bg-white">
+            <div class="position-sticky">
+                <div class="list-group list-group-flush mt-5">
+                    <a href="./index.html" class="list-group-item list-group-item-action py-4 ripple"
+                        aria-current="true">
+                        <img src="./assests/images/home.svg" class="me-3" width="26" height="25"
+                            alt="home"><span>Home</span>
+                    </a>
+                    <a href="./team.html" class="list-group-item list-group-item-action py-4 ripple"><img
+                            src="./assests/images/group.svg" width="26" height="25" class="me-3"
+                            alt="group"><span>Team</span></a>
+                    <a href="./table.html" class="list-group-item list-group-item-action py-4 ripple"><img
+                            src="./assests/images/mobile.svg" width="25" height="25" class="me-3"
+                            alt="mobile"><span>Call</span></a>
+                    <a href="#" class="list-group-item list-group-item-action py-4 ripple">
+                        <img src="./assests/images/calender.svg" width="25" height="25" class="me-3"
+                            alt="calender"><span>Meeting</span>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action py-4 ripple"><img
+                            src="./assests/images/line.svg" width="31" height="25" class="me-3"
+                            alt="line"><span>Analytics</span></a>
+                    <a href="#" class="list-group-item list-group-item-action py-4 ripple"><img
+                            src="./assests/images/setting.svg" width="25" height="25" class="me-3"
+                            alt="setting"></i><span>Setting</span></a>
+                </div>
+            </div>
+        </nav>
+        <!-- Sidebar -->
+        <!-- Navbar -->
+        <nav id="main-navbar" class="navbar main navbar-expand-lg navbar-light bg-white fixed-top">
+            <!-- Container wrapper -->
+            <div class="container-fluid">
+                <div class="d-flex align-items-center justify-content-between w-100">
+                    <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                        data-mdb-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <img src="./assests/images/bars-solid.svg" width="35" height="35" alt="">
+                    </button>
+                    <!-- Brand -->
+                    <div
+                        class="d-flex align-items-sm-center align-items-end justify-content-end justify-content-sm-between flex-sm-row flex-column flex-grow-1">
+                        <a class="navbar-brand logo" href="#">
+                            SalmanWap
+                        </a>
+                        <!-- Right links -->
+                        <ul class="navbar-nav ms-auto d-flex flex-row align-items-center">
+                            <!-- Icon -->
+                            <li class="nav-item">
+                                <a class="nav-link me-3 me-lg-0" href="#">
+                                    <img src="./assests/images/bell.svg" width="30" height="36" alt="bell">
+                                </a>
+                            </li>
+                            <!-- Avatar -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link  hidden-arrow d-flex align-items-center" href="#"
+                                    id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <img src="./assests/images/circle-img.svg" width="59" height="59" alt="circle-img">
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link  hidden-arrow d-flex align-items-center gap-3" href="#"
+                                    id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <p class="m-0 text">Shambhavi Mishra</p>
+                                    <img src="./assests/images/vector-down.svg" width="18" height="10"
+                                        alt="vector-down">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Container wrapper -->
+        </nav>
+    </header>
+    <!--Main Navigation-->
+
+    <!--Main layout-->
+    <main class="main-sec">
+        <div class="container-fluid px-xl-5 px-xxl-5 px-lg-5 px-md-3 pt-5">
+            <!-- main heaing -->
+            <div class="row d-flex align-items-center">
+                <div class="col-xl-7 col-lg-5">
+                    <h1>Hi Shambhavi,</h1>
+                    <p>you can manage your whole team from here.</p>
+                </div>
+                <div class="col-xl-5 col-lg-7">
+                    <div class="input">
+                        <input type="text" class="input-field" placeholder="Search" aria-label="Search"
+                            aria-describedby="search-icon">
+                    </div>
+                </div>
+            </div>
+            <!-- main heaing end  -->
+            <!-- Chart implementation -->
+            <div class="row mt-5 chart">
+                <div class="col-xl-8 col-lg-12">
+                    <div class="card">
+                        <div class="text-card">
+                            <h6 class="heading-clients">Revenue</h6>
+                            <p class="text-futur">2020</p>
+                        </div>
+                        <div class="line"></div>
+                        <div class="card-body">
+                            <canvas id="myChart" width="400" height="150"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-12 mt-3 mt-sm-3 mt-md-3 mt-lg-3 mt-xl-0">
+                    <div class="card">
+                        <div class="text-card">
+                            <h6 class="heading-clients">Team</h6>
+                            <p class="text-futur">Uplabs</p>
+                        </div>
+                        <div class="line"></div>
+                        <div class="card-body">
+                            <div class="chat">
+                                <div class="chat">
+                                    <img src="./assests/images/circle-img.svg" width="59" height="59" alt="circle-img">
+                                    <h3 class="heading px-3">Kyle Jenner</h3>
+                                </div>
+                                <div>
+                                    <img src="./assests/images/message.svg" width="20" height="17" alt="message">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="chat">
+                                <div class="chat">
+                                    <img src="./assests/images/circle-img.svg" width="59" height="59" alt="circle-img">
+                                    <h3 class="heading px-3">Kyle Jenner</h3>
+                                </div>
+                                <div>
+                                    <img src="./assests/images/message.svg" width="20" height="17" alt="message">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="chat">
+                                <div class="chat">
+                                    <img src="./assests/images/circle-img.svg" width="59" height="59" alt="circle-img">
+                                    <h3 class="heading px-3">Kyle Jenner</h3>
+                                </div>
+                                <div>
+                                    <img src="./assests/images/message.svg" width="20" height="17" alt="message">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Chart implementation end -->
+            <!-- client section -->
+            <div class="row mt-5 mb-3 chart">
+                <div class="col-xxl-3 col-xl-3 col-lg-5 col-md-6 col-sm-6 col-12">
+                    <div class="card">
+                        <div class="text-card">
+                            <h6 class="heading-clients">Clients</h6>
+                            <p class="text-futur">Uplabs</p>
+                        </div>
+                        <div class="line"></div>
+                        <div class="card-body">
+                            <div class="map pt-3">
+                                <h4 class="text-methew">Mathew Encine</h4>
+                                <p class="text-futur">The Futur</p>
+                            </div>
+                            <div class="map py-3">
+                                <h4 class="text-methew">John Parker</h4>
+                                <p class="text-futur">Uplabs</p>
+                            </div>
+                            <div class="map">
+                                <h4 class="text-methew">Salman Khan</h4>
+                                <p class="text-futur">SalmanWap</p>
+                            </div>
+                            <div class="map py-3">
+                                <h4 class="text-methew">Shivendra Pratap</h4>
+                                <p class="text-futur">SpdClub</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xxl-9 col-xl-9 col-lg-7 col-md-6 col-sm-6 col-12 mt-3 mt-sm-0">
+                    <div class="card">
+                        <div class="text-card">
+                            <h6 class="heading-clients">Projects</h6>
+                            <p class="text-futur">October</p>
+                        </div>
+                        <div class="line"></div>
+                        <div class="sec-card">
+                            <div class="settings">
+                                <div class="card-body">
+                                    <div class="card py-3 bg">
+                                        <div class="card-body">
+                                            <img src="./assests/images/layer.svg" width="35" height="35"
+                                                class="card-img-top" alt="...">
+                                            <h5 class="card-title py-4">Analytics Design</h5>
+                                            <img src="./assests/images/persons.png" width="82" height="21"
+                                                alt="persons">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="settings">
+                                <div class="card-body">
+                                    <div class="card py-3 bg">
+                                        <div class="card-body">
+                                            <img src="./assests/images/jhola.svg" width="37" height="35"
+                                                class="card-img-top" alt="jhola">
+                                            <h5 class="card-title py-4">Analytics Design</h5>
+                                            <img src="./assests/images/persons.png" width="82" height="21"
+                                                alt="persons">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="settings">
+                                <div class="card-body">
+                                    <div class="card py-3 bg">
+                                        <div class="card-body">
+                                            <img src="./assests/images/spring.svg" width="35" height="35"
+                                                class="card-img-top" alt="spring">
+                                            <h5 class="card-title py-4">Analytics Design</h5>
+                                            <img src="./assests/images/persons.png" width="82" height="21"
+                                                alt="persons">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="settings">
+                                <div class="card-body">
+                                    <div class="card py-3 bg">
+                                        <div class="card-body">
+                                            <img src="./assests/images/yoga.svg" width="35" height="35"
+                                                class="card-img-top" alt="yoga">
+                                            <h5 class="card-title py-4">Analytics Design</h5>
+                                            <img src="./assests/images/persons.png" width="82" height="21"
+                                                alt="persons">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="settings">
+                                <div class="card-body">
+                                    <div class="card bg">
+                                        <div class="card-body last">
+                                            <img src="./assests/images/plus.svg" width="35" height="35"
+                                                class="card-img-top" alt="plus">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        if (typeof Chart !== 'undefined') {
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                    datasets: [{
+                        label: '# of Votes',
+                        data: [2, 3, 1, 3, 2, 1, 3, 4, 3, 2, 2, 3],
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        borderWidth: 2,
+                        lineTension: 0.5,
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function (value, index, values) {
+                                    return value + 'k';
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                        annotation: {
+                            annotations: [{
+                                type: 'line',
+                                mode: 'horizontal',
+                                scaleID: 'y',
+                                value: 1000,
+                                borderColor: 'red',
+                                borderWidth: 2,
+                                label: {
+                                    content: 'Threshold: 5000',
+                                    enabled: true
+                                }
+                            }]
+                        }
+                    }
+                }
+            });
+        } else {
+            console.error('Chart.js is not defined.');
+        }
+    </script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"></script>
+
+</body>
+
+</html>

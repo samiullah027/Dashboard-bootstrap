@@ -1,0 +1,76 @@
+.main {
+  .logo {
+    color: #52dbb2;
+    font-size: 30px;
+    font-weight: 600;
+  }
+  .text {
+    color: #6c7172;
+    font-size: 25px;
+    font-weight: 400;
+    @media (max-width: 578px) {
+      font-size: 16px;
+      font-weight: 400;
+      padding-left: 10px;
+    }
+  }
+}
+//   side bar
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding: 58px 0 0; /* Height of navbar */
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+  width: 240px;
+  z-index: 600;
+}
+.side-bar {
+  .sidebar-main{
+    top: 92px;
+    padding: 0;
+  }
+  .list-group-item {
+    border-bottom: 0;
+    border-left: 4px solid transparent;
+    &:hover {
+      background: linear-gradient(
+        90deg,
+        #eafbf6 0%,
+        rgba(255, 255, 255, 0) 78.6%
+      );
+      border-left: 4px solid #52dbb2;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .sidebar {
+    width: 100%;
+    min-height: calc(100vh - 160px);
+    overflow: auto;
+    top: 68px;
+  }
+}
+.sidebar .active {
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+
+.sidebar-sticky {
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: 0.5rem;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+body {
+  background-color: #fbfbfb;
+}
+@media (min-width: 991.98px) {
+  main {
+    padding-left: 240px;
+  }
+}
